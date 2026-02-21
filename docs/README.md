@@ -1,11 +1,17 @@
-# Pyth Price Monitor Documentation
+# Pyth Price Monitor - Documentation
 
-This directory contains comprehensive documentation for running, configuring, and extending `pyth-price-monitor`.
+This directory contains all detailed documentation for `pyth-price-monitor`.
+
+For a project overview and quick-start, see the root [README.md](../README.md).
 
 ## Contents
 
-- [Program Usage](./USAGE.md)
-- [Architecture](./ARCHITECTURE.md)
+| File | Description |
+|------|-------------|
+| [USAGE.md](./USAGE.md) | Configuration reference, run commands, API reference, common patterns, error handling, performance tips, troubleshooting, and production deployment |
+| [ARCHITECTURE.md](./ARCHITECTURE.md) | Module overview, data flow diagram, module interfaces, Pyth/Hermes internals, and production considerations |
+| [CONTRIBUTING.md](./CONTRIBUTING.md) | Development workflow, quality gate commands, code standards, and PR guidelines |
+| [SECURITY.md](./SECURITY.md) | Vulnerability reporting process, security practices, and deployment hardening checklist |
 
 ## Quick Start
 

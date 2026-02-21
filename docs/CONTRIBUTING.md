@@ -30,8 +30,8 @@ cargo test --all-targets
 
 4. Update docs when behavior or configuration changes:
 
-- `README.md`
-- `docs/`
+- `README.md` (project overview and quick-start)
+- `docs/` (this directory - all detailed documentation)
 - `.env.example`
 - rustdoc for public APIs
 
