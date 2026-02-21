@@ -1,0 +1,41 @@
+# --- Rust build outputs ---
+/target/
+**/*.rs.bk
+
+# --- Environment and secrets ---
+.env
+.env.*
+!.env.example
+.envrc
+
+# Common secret/key material
+*.pem
+*.key
+*.p12
+*.pfx
+
+# --- Cargo local state ---
+.cargo/credentials.toml
+
+# --- Test/coverage/profiling artifacts ---
+/coverage/
+/benchmarks/
+tarpaulin-report.html
+*.profraw
+*.profdata
+*.gcda
+*.gcno
+
+# --- Logs and temp files ---
+*.log
+*.tmp
+*.temp
+
+# --- OS/editor/tooling noise ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Local project-only scratch dirs ---
+_dev/

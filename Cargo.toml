@@ -1,0 +1,61 @@
+[package]
+name = "pyth-price-monitor"
+version = "0.1.0"
+edition = "2024"
+
+# Keep the crate layout explicit for discoverability.
+# - binary entrypoint: src/main.rs
+# - library API:      src/lib.rs
+
+[lib]
+name = "pyth_price_monitor"
+path = "src/lib.rs"
+
+[dependencies]
+# Ethereum RPC/types/signers/contracts integration.
+alloy = { version = "1", features = ["full"] }
+
+# Load environment variables from `.env` during local development.
+dotenvy = "0.15"
+
+# Async runtime + macros used by binaries/examples.
+tokio = { version = "1", features = ["full"] }
+
+# Data model serialization/deserialization for Hermes payloads.
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# HTTP client for REST and SSE stream transport.
+reqwest = { version = "0.13", features = ["json", "stream"] }
+
+# Low-latency WebSocket client path for Ethereum JSON-RPC.
+fastwebsockets = { version = "0.10", features = ["upgrade"] }
+hyper = "1"
+http-body-util = "0.1"
+tokio-rustls = "0.26"
+webpki-roots = "1"
+
+# Stream combinators for processing async update feeds.
+futures = "0.3"
+
+# Ergonomic error propagation with context.
+anyhow = "1"
+
+# Structured logging and filtering.
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+chrono = "0.4"
+
+[dev-dependencies]
+# Async test helpers for future unit/integration tests.
+tokio-test = "0.4"
+
+# Performance-oriented profile tuning.
+[profile.dev]
+opt-level = 1
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = "symbols"

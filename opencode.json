@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    ".opencode/rules/00-core.md",
+    ".opencode/rules/10-rust-standards.md",
+    ".opencode/rules/20-testing-and-quality.md",
+    ".opencode/rules/30-security-and-dependencies.md",
+    ".opencode/rules/40-docs-and-observability.md"
+  ]
+}
