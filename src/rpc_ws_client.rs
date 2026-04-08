@@ -1,16 +1,16 @@
 use anyhow::{Context, Result};
-use fastwebsockets::{handshake, Frame, OpCode};
+use fastwebsockets::{Frame, OpCode, handshake};
 use http_body_util::Empty;
 use hyper::header::{CONNECTION, UPGRADE};
-use hyper::{body::Bytes, Request};
+use hyper::{Request, body::Bytes};
 use reqwest::Url;
 use serde::Deserialize;
 use serde_json::json;
 use std::future::Future;
 use std::sync::Arc;
 use tokio::net::TcpStream;
-use tokio_rustls::rustls::{self, RootCertStore};
 use tokio_rustls::TlsConnector;
+use tokio_rustls::rustls::{self, RootCertStore};
 
 pub async fn get_latest_block_number(endpoint: &str) -> Result<u64> {
     let url = Url::parse(endpoint).context("Invalid ETH_RPC_WS_URL")?;
