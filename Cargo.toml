@@ -32,7 +32,7 @@ reqwest = { version = "0.13", features = ["json", "stream"] }
 fastwebsockets = { version = "0.10", features = ["upgrade"] }
 hyper = "1"
 http-body-util = "0.1"
-tokio-rustls = "0.26"
+tokio-rustls = { version = "0.26", features = ["ring"] }
 webpki-roots = "1"
 
 # Stream combinators for processing async update feeds.

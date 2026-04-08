@@ -4,7 +4,7 @@ use anyhow::Result;
 use pyth_price_monitor::config::Config;
 use pyth_price_monitor::price_monitor::PriceMonitor;
 use pyth_price_monitor::rpc_ws_client;
-use tracing::{Level, info};
+use tracing::{info, Level};
 use tracing_subscriber::FmtSubscriber;
 
 #[tokio::main]

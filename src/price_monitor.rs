@@ -82,7 +82,6 @@ impl PriceMonitor {
             .format_unix_timestamp(publish_time_unix);
 
         info!(
-            event = "price_update",
             feed_id = %parsed_feed.id,
             price = parsed_feed.price.price,
             confidence = parsed_feed.price.conf,
@@ -90,7 +89,7 @@ impl PriceMonitor {
             publish_time_unix,
             publish_time_local = %publish_time_local,
             timezone = %self.output_timezone.label(),
-            "price_update"
+            "Price update received"
         );
 
         let mut latest = self.latest_prices.write().await;
