@@ -13,7 +13,7 @@ path = "src/lib.rs"
 
 [dependencies]
 # Ethereum RPC/types/signers/contracts integration.
-alloy = { version = "1", features = ["full"] }
+alloy = { version = "2.0.0", features = ["full"] }
 
 # Load environment variables from `.env` during local development.
 dotenvy = "0.15"
@@ -30,8 +30,8 @@ reqwest = { version = "0.13", features = ["json", "stream"] }
 
 # Low-latency WebSocket client path for Ethereum JSON-RPC.
 fastwebsockets = { version = "0.10", features = ["upgrade"] }
-hyper = "1"
 http-body-util = "0.1"
+hyper = "1"
 tokio-rustls = { version = "0.26", features = ["ring"] }
 webpki-roots = "1"
 
@@ -42,9 +42,9 @@ futures = "0.3"
 anyhow = "1"
 
 # Structured logging and filtering.
+chrono = "0.4"
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
-chrono = "0.4"
 
 [dev-dependencies]
 # Async test helpers for future unit/integration tests.
