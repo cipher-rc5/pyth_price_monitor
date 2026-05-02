@@ -13,7 +13,7 @@ path = "src/lib.rs"
 
 [dependencies]
 # Ethereum RPC/types/signers/contracts integration.
-alloy = { version = "2.0.0", features = ["full"] }
+alloy = { version = "2.0.1", features = ["full"] }
 
 # Load environment variables from `.env` during local development.
 dotenvy = "0.15"
